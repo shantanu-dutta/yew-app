@@ -17,11 +17,11 @@ impl Component for DropImage {
   type Message = Msg;
   type Properties = ();
 
-  fn create(ctx: &Context<Self>) -> Self {
+  fn create(_ctx: &Context<Self>) -> Self {
     Self { images: vec!() }
   }
 
-  fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
+  fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
     match msg {
       Msg::Dragged(event) => {
         event.prevent_default();
